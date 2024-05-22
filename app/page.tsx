@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Marquee from './components/Marquee'
 import About from './components/About'
 import Eyes from './components/Eyes'
+import Features from './components/Features'
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Marquee/>
       <About/>
       <Eyes/>
+      <Features/>
     </div>
   )
 }

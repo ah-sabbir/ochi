@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${FoundersGrotesk.className}  ${NeueMontreal.variable} `}> {/* ${NeueMontreal.className} ${NeueMontreal.variable}  ${FoundersGrotesk.variable} */}
+      <body className={`${FoundersGrotesk.className}  ${NeueMontreal.variable} `} suppressHydrationWarning={true}> {/* ${NeueMontreal.className} ${NeueMontreal.variable}  ${FoundersGrotesk.variable} */}
         {children}
         </body>
     </html>
