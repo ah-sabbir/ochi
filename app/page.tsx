@@ -5,6 +5,8 @@ import Marquee from './components/Marquee'
 import About from './components/About'
 import Eyes from './components/Eyes'
 import Features from './components/Features'
+import { Card } from './components/Cards'
+import { Ready } from './components/Ready'
 
 function Home() {
   return (
@@ -15,6 +17,8 @@ function Home() {
       <About/>
       <Eyes/>
       <Features/>
+      <Card/>
+      <Ready/>
     </div>
   )
 }
