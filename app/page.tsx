@@ -7,6 +7,7 @@ import Eyes from './components/Eyes'
 import Features from './components/Features'
 import { Card } from './components/Cards'
 import { Ready } from './components/Ready'
+import { Footer } from './components/Footer'
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
       <Features/>
       <Card/>
       <Ready/>
+      <Footer/>
     </div>
   )
 }
