@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import LandingPage from './components/LandingPage'
 import Navbar from './components/Navbar'
 import Marquee from './components/Marquee'
@@ -9,17 +9,30 @@ import Features from './components/Features'
 import { Card } from './components/Cards'
 import { Ready } from './components/Ready'
 import { Footer } from './components/Footer'
-import LocomotiveScroll from 'locomotive-scroll';
 
-//import dynamic from 'next/dynamic'
- 
 //const DynamicHeader = dynamic(() => import('../components/header'), {
 //  ssr: false,
 //})
 
 
 function Home() {
-const locomotiveScroll = new LocomotiveScroll()
+  const [isWindow, setIsWindow] = useState(false);
+
+  useEffect(() => {
+	let scroll:any;
+        import("locomotive-scroll").then((locomotiveModule) => {
+            scroll = new locomotiveModule.default({
+              destroyCustomTicker:()=> {return 300}
+            });
+        });
+        // `useEffect`'s cleanup phase
+      //   return () => {
+      //      if (scroll) scroll.destroy();
+      //  }
+      setTimeout(function () {
+        if (scroll) scroll.destroy();
+    }, 400);
+  }, [])
   return (
     <div className='w-full min-h-screen text-white bg-zinc-900'>
       <Navbar/>
