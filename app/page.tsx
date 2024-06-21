@@ -29,9 +29,10 @@ function Home() {
       //   return () => {
       //      if (scroll) scroll.destroy();
       //  }
-      setTimeout(function () {
-        if (scroll) scroll.destroy();
-    }, 800);
+    //   setTimeout(function () {
+    //     if (scroll) scroll.destroy();
+    // }, 300);
+    return scroll;
   }, [])
   return (
     <div className='w-full min-h-screen text-white bg-zinc-900'>
