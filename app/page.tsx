@@ -31,7 +31,7 @@ function Home() {
       //  }
       setTimeout(function () {
         if (scroll) scroll.destroy();
-    }, 400);
+    }, 800);
   }, [])
   return (
     <div className='w-full min-h-screen text-white bg-zinc-900'>
